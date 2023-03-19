@@ -1,0 +1,15 @@
+<div>
+  <mat-chip-list [(ngModel)]="categories">
+    <nwp-categories-body
+      *ngFor="let category of categories"
+      (click)="selectedCategory(category)"
+      [id]="category.id"
+      [categoryName]="category.categoryName"
+      [categoryUserEmail]="category.categoryUserEmail"
+      [isSelected]="category.isSelected"
+      [currentCategory]="category"
+    >
+    </nwp-categories-body>
+  </mat-chip-list>
+  <button mat-button-color="primary" (click)="onSubmit()">Primary</button>
+</div>

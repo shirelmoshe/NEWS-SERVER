@@ -1,0 +1,30 @@
+<div class="nwp-home-page-component">
+  <ngb-carousel *ngIf="images" class="nwp-homeee">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <a [href]="image.NewsItemUrl" target="_blank">
+          <img [src]="image.NewsItemImage" />
+        </a>
+      </div>
+      <div class="carousel-caption">
+        <h3>{{ image.NewsItemTitle }}</h3>
+        <p>{{ image.NewsItemDescription }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<div class="nwp-home-page-component">
+  <ngb-carousel *ngIf="images" class="nwp-homeee">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <a [href]="image.NewsItemUrl" target="_blank">
+          <img [src]="image.NewsItemImage" />
+        </a>
+      </div>
+      <div class="carousel-caption">
+        <h3>{{ image.NewsItemTitle }}</h3>
+        <p>{{ image.NewsItemDescription }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

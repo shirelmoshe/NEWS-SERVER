@@ -1,0 +1,14 @@
+<mat-toolbar color="accent">
+  <nwp-logout-button></nwp-logout-button>
+  <button
+    *ngFor="let link of RoutesPages"
+    mat-button
+    [routerLink]="link.path"
+    [innerText]="link.pathName"
+  ></button>
+  <ul *ngIf="auth.user$ | async as user">
+    <li>{{ user.name }}</li>
+    <li>{{ user.email }}</li>
+  </ul>
+  <span class="example-spacer"></span>
+</mat-toolbar>

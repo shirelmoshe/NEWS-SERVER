@@ -1,0 +1,9 @@
+<div>
+  <div *ngIf="isAuthenticated; else showLoginButton">
+    <nwp-navbar-body [RoutesPages]="tempRoutes"></nwp-navbar-body>
+    <router-outlet></router-outlet>
+  </div>
+  <ng-template #showLoginButton>
+    <nwp-login-page></nwp-login-page>
+  </ng-template>
+</div>
